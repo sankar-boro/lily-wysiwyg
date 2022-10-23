@@ -1,0 +1,19 @@
+{
+  "name": "lily-wysiwyg",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "dist/lily-wysiwyg.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/plugin-transform-runtime": "^7.16.8",
+    "@babel/preset-env": "^7.16.8",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "webpack": "^5.66.0"
+  },
+  "scripts": {
+    "build": "webpack --config ./config/webpack.config.js --env env=prod"
+  }
+}
