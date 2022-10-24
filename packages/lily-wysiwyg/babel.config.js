@@ -10,11 +10,18 @@ module.exports = {
       "@babel/preset-typescript"
     ],
     "plugins": [
+      ["transform-flow-strip-types"],
       [
         "@babel/plugin-transform-runtime",
         {
           "regenerator": true
         }
+      ],
+      [
+        "@babel/plugin-proposal-class-properties",
+        {
+          "loose": true
+        }
       ]
-    ]
+    ],
 }

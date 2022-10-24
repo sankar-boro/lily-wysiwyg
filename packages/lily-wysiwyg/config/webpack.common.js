@@ -1,5 +1,6 @@
 const fs = require('fs')
 const path = require('path')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 function findPackages () {
   const pkgRoot = path.join(__dirname, '..');
@@ -48,7 +49,16 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '/',
+              // hmr: process.env.NODE_ENV === 'development',
+            },
+          },
+          'css-loader',
+        ],
       },
       {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
