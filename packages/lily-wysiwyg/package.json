@@ -2,7 +2,7 @@
   "name": "@b0r0/lily-wysiwyg",
   "version": "0.1.0",
   "license": "MIT",
-  "main": "bundle.js",
+  "main": "index.js",
   "type": "module",
   "private": false,
   "dependencies": {},

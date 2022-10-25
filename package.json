@@ -9,7 +9,7 @@
     "packages/*"
   ],
   "scripts": {
-    "start": "webpack serve --config ./config/webpack.config.js --env env=dev",
+    "start": "cd packages/lily-web && yarn start",
     "build": "cd packages/lily-wysiwyg && yarn build",
     "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
     "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",

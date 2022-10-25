@@ -59,16 +59,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: '/',
-              // hmr: process.env.NODE_ENV === 'development',
-            },
-          },
-          'css-loader',
-        ],
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
@@ -82,7 +73,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, '..', './build'),
-    filename: 'index.js',
+    filename: 'bundle.js',
     publicPath: '/'
   },
   stats: 'errors-only',

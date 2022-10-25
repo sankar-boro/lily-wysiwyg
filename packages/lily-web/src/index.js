@@ -1,16 +1,11 @@
 import React, { useState } from "react";
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter } from "react-router-dom";
-import { Editor } from "lily-utils"
+import { Editor } from "@b0r0/lily-wysiwyg"
 import { EditorState } from "draft-js";
+import "./lily-wysiwyg.css";
 
 const container = document.getElementById('root');
 const root = createRoot(container); // createRoot(container!) if you use TypeScript
-// root.render(
-//     <BrowserRouter>
-//         <Route />
-//     </BrowserRouter>
-// );
 
 const Main = () => {
     const editorState_ = EditorState.createEmpty();
@@ -33,12 +28,4 @@ const Main = () => {
     />
 }
 
-root.render(
-    <React.StrictMode>
-        <BrowserRouter>
-            <Main />
-        </BrowserRouter>
-    </React.StrictMode>
-);
-
-// root.render(<Main />)
+root.render(<Main />)
