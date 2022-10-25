@@ -2,7 +2,7 @@
   "name": "lily-wysiwyg",
   "version": "1.0.0",
   "license": "MIT",
-  "main": "dist/lily-wysiwyg.js",
+  "main": "bundle.js",
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.16.7",
@@ -20,9 +20,10 @@
     "webpack": "^5.66.0"
   },
   "scripts": {
-    "clean": "rimraf dist",
-    "build:webpack": "cross-env NODE_ENV=production webpack  --mode production --config ./config/webpack.config.js",
+    "clean": "rimraf build",
+    "build:webpack": "cross-env NODE_ENV=production webpack  --mode production --config ./config/webpack.config.js --env env=prod",
     "start": "webpack-dev-server --open --hot --mode development",
-    "build": "npm run clean && npm run build:webpack"
+    "build:others": "./scripts/run.mjs",
+    "build": "npm run clean && npm run build:webpack && yarn build:others"
   }
 }
