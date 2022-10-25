@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "main": "bundle.js",
+  "type": "module",
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.16.7",
@@ -10,6 +11,7 @@
     "@babel/preset-env": "^7.16.8",
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
+    "@babel/runtime": "^7.19.4",
     "autoprefixer": "^10.4.12",
     "babel-loader": "^8.2.5",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
@@ -21,7 +23,7 @@
   },
   "scripts": {
     "clean": "rimraf build",
-    "build:webpack": "cross-env NODE_ENV=production webpack  --mode production --config ./config/webpack.config.js --env env=prod",
+    "build:webpack": "cross-env NODE_ENV=production webpack  --mode production --config ./config/webpack.config.cjs --env env=prod",
     "start": "webpack-dev-server --open --hot --mode development",
     "build:others": "./scripts/run.mjs",
     "build": "npm run clean && npm run build:webpack && yarn build:others"
