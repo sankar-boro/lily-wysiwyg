@@ -1,9 +1,10 @@
 {
-  "name": "lily-wysiwyg",
-  "version": "1.0.0",
+  "name": "@b0r0/lily-wysiwyg",
+  "version": "0.1.0",
   "license": "MIT",
   "main": "bundle.js",
   "type": "module",
+  "private": false,
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.16.7",

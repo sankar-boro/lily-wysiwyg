@@ -16,7 +16,7 @@
     "draft-js": "^0.11.7",
     "draftjs-to-html": "^0.9.1",
     "editor.md": "^1.5.0",
-    "lily-wysiwyg": "1.0.0",
+    "@b0r0/lily-wysiwyg": "0.1.0",
     "lunr": "^2.3.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
